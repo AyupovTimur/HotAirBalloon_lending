@@ -1,0 +1,66 @@
+// Это компонент кнопки
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        @include style-link($color-grey);
+        position: relative;
+        border-radius: 5rem;
+        background-color: $color-white;
+        padding: 1.5rem 4rem;
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        letter-spacing: .5rem;
+        transition: all .2s;
+        border: none;
+    }
+
+    &_brown {
+        color: $color-white;
+        background-color: $color-brown-light;
+        &:hover {
+            background-color: $color-brown-dark;
+            &::after {
+                background-color: $color-brown-dark;
+                opacity: 0;
+            }
+        }
+    }
+
+    &:hover {
+        transform: translateY(-.4rem);
+        box-shadow: $shadow-box;
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(.2rem);
+    }
+
+    &::after {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        background: $color-white;
+        width: 100%;
+        height: 100%;
+        border-radius: 5rem;
+        z-index: -1;
+        transition: all .6s;
+    }
+
+    &_animatedDownToUp {
+        animation-name: downToUpBtn;
+        @include animation-sideways;
+    }
+
+}
+

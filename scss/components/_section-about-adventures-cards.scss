@@ -1,0 +1,19 @@
+.section-about-adventures__block {
+    width: 24rem;
+    height: 30rem;
+    background: rgba($color-white, 0.8);
+    border-radius: .5rem;
+    text-align: center;
+    box-shadow: $shadow-box;
+    transition: all .5s;
+
+    &:hover {
+        transform: translateY(-.5rem);
+    }
+}
+
+.section-about-adventures__icon {
+    margin: 0 auto;
+    margin-bottom: 2.2rem;
+    padding-top: 2.5rem;
+}

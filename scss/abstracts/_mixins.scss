@@ -1,0 +1,21 @@
+@mixin animation-sideways {
+    animation-duration: 2s;
+    animation-delay: .7s;
+    animation-timing-function: ease;
+    backface-visibility: hidden;
+}
+
+@mixin style-link($color) {
+    display: inline-block;
+    text-decoration: none;
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}

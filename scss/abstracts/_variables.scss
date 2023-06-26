@@ -1,0 +1,20 @@
+$color-grey: #777777;
+$color-white: #ffffff;
+$color-brown-light: #BA8554;
+$color-brown-dark: #A14F03;
+$color-black: #000000;
+
+//Это тень под кнопкой в header
+$shadow-box: (
+    0px 4px 4px rgba(0, 0, 0, 0.3)
+);
+
+//Это тень под заголовками в main
+$shadow-h2: (
+    0rem .5rem .4rem rgba($color-black, .25)
+);
+
+//Настройки системы колонок
+$margin-vertical-big: 8rem;
+$grid-width: 114rem;
+$gutter-horizontal: 6rem;

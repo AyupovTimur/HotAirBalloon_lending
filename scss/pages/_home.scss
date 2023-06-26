@@ -1,0 +1,19 @@
+.section-about {
+    padding-top: 8rem;
+}
+
+.section-about-adventures {
+    background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7), rgba($color-black, 0.7)), url('../../img/mainBkg.png') center/cover no-repeat;
+    clip-path: polygon(0 0, 100% 16%, 100% 100%, 0 88%);
+    padding: 21.6rem 9rem;
+}
+
+.section-feedBack {
+    padding: 8rem 0 8rem;
+    position: relative;
+}
+
+.section-reserve {
+    padding: 10rem;
+    background: linear-gradient(90deg, $color-brown-light, $color-brown-dark)
+}

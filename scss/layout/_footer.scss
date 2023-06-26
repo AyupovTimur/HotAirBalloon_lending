@@ -1,0 +1,44 @@
+.footer {
+    padding: 8rem 0 8rem 0;
+    background-color: #333333;
+
+    &__icon {
+        width: 12rem;
+        height: 15rem;
+    }
+
+    &__list {
+        text-align: center;
+        position: relative;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            backface-visibility: hidden;
+            display: inline-block;
+            color: $color-white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            letter-spacing: .2rem;
+            transition: all .2s;
+        }
+
+        &:hover {
+            transform: scale(1.1, 1.1);
+            color: $color-brown-light;
+        }
+    }
+}

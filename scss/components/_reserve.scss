@@ -1,0 +1,81 @@
+.reserve {
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0.6979925759366247) 0%, rgba(255, 255, 255, 0.6979925759366247) 57%, rgba(186, 133, 84, 0.7035948168329832) 57%, rgba(161, 79, 3, 0.7007936963848039) 100%), url('../../img/bg-reserve.jpg') center/cover no-repeat;
+    height: 50rem;
+    box-shadow: $shadow-box;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.form {
+    padding-top: 5rem;
+    width: 65%;
+    padding-left: 5rem;
+
+    &__group:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+
+    &__input {
+        padding: 1.8rem 0 1.8rem 2.2rem;
+        width: 55%;
+        font-weight: 400;
+        border: none;
+        border-bottom: .3rem solid transparent;
+        color: $color-black;
+        background: $color-white;
+        box-shadow: $shadow-box;
+        border-radius: .3rem;
+
+        &:focus {
+            outline: none;
+            border-bottom: .3rem solid green;
+            box-shadow: $shadow-box;
+        }
+
+        &:focus:invalid {
+            border-bottom: .3rem solid red;
+        }
+    }
+    &__group-radio {
+        display: inline-block;
+        width: 35%;
+    }
+
+    &__label-radio {
+        position: relative;
+        cursor: pointer;
+        padding-left: 3.5rem;
+    }
+
+    &__input-radio {
+        display: none;
+    }
+
+    &__button-radio {
+        position: absolute;
+        left: 0;
+        top: -.5rem;
+        display: block;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 100%;
+        border: .5rem solid $color-brown-light;
+        &::after {
+            display: block;
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 100%;
+            background: $color-brown-light;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: all .3s;
+        }
+    }
+    &__input-radio:checked ~ &__label-radio &__button-radio::after {
+        opacity: 1;
+    }
+}
